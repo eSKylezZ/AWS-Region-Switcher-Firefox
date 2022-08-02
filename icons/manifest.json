@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "AWS Region auto change",
+    "version": "0.1",
+    "description": "Auto Changes AWS region to eu-west-1",
+    "icons": {
+        "48": "icons/AWS-Logo.png"
+    },
+    "content_scripts": [
+        {
+        "matches": ["*://*.console.aws.amazon.com/*"],
+        "js": ["region-change.js"]
+    }
+    ]
+}
