@@ -6,10 +6,18 @@
     "icons": {
         "48": "icons/AWS-Logo-48.png"
     },
+    "browser_specific_settings": {
+        "gecko": {
+            "strict_min_version": "42.0"
+        }
+    },
     "content_scripts": [
         {
         "matches": ["*://*.console.aws.amazon.com/*"],
         "js": ["region-change.js"]
     }
+    ],
+    "permissions": [
+        "*://*.console.aws.amazon.com/*"
     ]
 }
